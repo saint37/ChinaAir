@@ -12,8 +12,8 @@
             <p align="justify">{{para3}}</p>
         </Col>
         <Col span="12" class="content">
-            <div class="introimg"><img :src="img3"></div>
-            <div class="introimg"><img :src="img1"></div>
+            <div class="introimg"><div class="bluecover"></div><img :src="img3"></div>
+            <div class="introimg"><div class="bluecover"></div><img :src="img1"></div>
         </Col>
     </Row>
   </div>
@@ -38,10 +38,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .mylayout{
-    padding: 20px 0px 20px 50px;
+    padding: 20px 0px 10px 70px;
 }
 .content{
-    padding-top: 80px;
+    padding-top: 70px;
 }
 .content p{
     font-size: 12px;
@@ -76,5 +76,16 @@ export default {
 }
 .introimg img{
     width: 100%;
+}
+.bluecover{
+    position: absolute;
+    background: rgba(50, 130, 230, 0);
+    width: 260px;
+    height: 264px;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+.bluecover:hover{
+    background: rgba(50, 130, 230, 0.5);    
 }
 </style>

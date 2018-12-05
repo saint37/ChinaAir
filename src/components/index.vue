@@ -4,9 +4,13 @@
             <div class="slideshow">
               <transition-group tag="ul" name="image">
                 <li v-for="(img, index) in imgArray" v-show="index===mark" :key="index">
-                  <a href="#">
-                    <img :src='img'>
-                  </a>
+                    <div :class="img.color == 'blue' ? 'wordwrap' : 'wordwrap2'">
+                        <div class="title">{{img.data}}</div>
+                        <div class="divider"></div>
+                        <div class="title2">{{img.data2}}</div>                        
+                        <router-link :to="{path:img.url}"><Button type="primary" class="moreBtn">了解更多···<Icon type="md-arrow-round-forward" /></Button></router-link>
+                    </div>
+                    <img :src='img.img'>
                 </li>
               </transition-group>
             </div>
@@ -27,12 +31,12 @@ export default {
       timer: null, //定时器
       mark: 0,
       imgArray: [
-        require("../assets/index/1.png"),
-        require("../assets/index/2.png"),
-        require("../assets/index/3.png"),
-        require("../assets/index/4.png"),
-        require("../assets/index/5.png"),
-        require("../assets/index/6.png")
+        {img:require("../assets/index/1.png"),color:"blue",data:"ABOUT US",data2:"关于我们",url:"aboutUs"},
+        {img:require("../assets/index/2.png"),color:"white",data:"PROFESSIONAL INSTRUCTIONS",data2:"专业说明",url:"Professional"},
+        {img:require("../assets/index/3.png"),color:"white",data:"DYNAMIC",data2:"中航动态",url:"Dynamic"},
+        {img:require("../assets/index/4.png"),color:"blue",data:"VIDEO",data2:"视频资料",url:"Video"},
+        {img:require("../assets/index/5.png"),color:"blue",data:"CONTACT US",data2:"联系我们",url:"Contact"},
+        {img:require("../assets/index/6.png"),color:"white",data:"PARTNER",data2:"合作伙伴",url:"Partner"}
       ]
     }
   },
@@ -124,4 +128,71 @@ export default {
   .image-leave {
     transform: translateX(0);
   }
+    .wordwrap,.wordwrap2{
+        position: absolute;
+        width: 500px;
+        padding: 50px 100px;
+    }
+    .wordwrap .moreBtn{
+        width: 100px;
+        margin-top: 40px;
+        padding: 3px 15px;
+        border: none;
+        background: #284c9a;
+        color: #fff;
+    }
+    .wordwrap .moreBtn:hover{
+        background: #fff;
+        color: #284c9a;
+    }
+    .wordwrap .title{
+        font-size: 40px;
+        font-style: italic;
+        letter-spacing: 5px;
+        font-weight: bold;
+        color: #284c9a;
+    }
+    .wordwrap .title2{
+        padding-top: 10px;
+        font-size: 18px;
+        color: #666;
+        font-weight: bold;
+    }
+    .wordwrap .divider{
+        width: 30px;
+        height: 4px;
+        background: #284c9a;
+        border-radius:5px;
+    }
+    .wordwrap2 .moreBtn{
+        width: 100px;
+        margin-top: 40px;
+        padding: 3px 15px;
+        border: none;
+        background: #fff;
+        color: #284c9a;
+    }
+    .wordwrap2 .moreBtn:hover{
+        background: #284c9a;
+        color: #fff;
+    }
+    .wordwrap2 .title{
+        font-size: 40px;
+        font-style: italic;
+        letter-spacing: 5px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .wordwrap2 .title2{
+        padding-top: 10px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .wordwrap2 .divider{
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        border-radius:5px;
+    }
 </style>
