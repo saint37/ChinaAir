@@ -7,7 +7,12 @@ import aboutUs from '@/components/aboutUs'
 import Dynamic from '@/components/dynamic'
 import Video from '@/components/video'
 import Contact from '@/components/contact'
-import Partner from '@/components/Partner'
+import Partner from '@/components/partner'
+import Professional from '@/components/professional'
+import Aviation from '@/components/Aviation'
+import Aircrew from '@/components/Aircrew'
+import Service from '@/components/Service'
+import Security from '@/components/Security'
 
 Vue.use(Router)
 
@@ -58,6 +63,31 @@ export default new Router({
           path: '/Partner',
           name: 'Partner',
           component: Partner
+        },
+        {
+          path: '/Professional',
+          name: 'Professional',
+          component: Professional
+        },
+        {
+          path: '/Prof-Aviation',
+          name: 'Aviation',
+          component: Aviation
+        },
+        {
+          path: '/Prof-Aircrew',
+          name: 'Aircrew',
+          component: Aircrew
+        },
+        {
+          path: '/Prof-Service',
+          name: 'Service',
+          component: Service
+        },
+        {
+          path: '/Prof-Security',
+          name: 'Security',
+          component: Security
         }
       ]
     },

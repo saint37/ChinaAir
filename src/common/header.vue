@@ -18,11 +18,12 @@
                 <template slot="title">
                     专业说明
                 </template>
+                <MenuItem name="Professional">专业说明</MenuItem>
                 <MenuGroup title="专业">
-                    <MenuItem name="3-1">航空飞行</MenuItem>
-                    <MenuItem name="3-2">空中乘务</MenuItem>
-                    <MenuItem name="3-3">航空服务</MenuItem>
-                    <MenuItem name="3-3">空中安全</MenuItem>
+                    <MenuItem name="Prof-Aviation">航空飞行</MenuItem>
+                    <MenuItem name="Prof-Aircrew">空中乘务</MenuItem>
+                    <MenuItem name="Prof-Service">航空服务</MenuItem>
+                    <MenuItem name="Prof-Security">空中安全</MenuItem>
                 </MenuGroup>
             </Submenu>
             <MenuItem name="Dynamic">
