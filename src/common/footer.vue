@@ -1,8 +1,8 @@
 <template>
   <div class="myfooter">
     <Row type="flex" justify="center" class="code-row-bg">
-        <Col span="4"><div class="layout-qr"><img :src="qrcode"></div></Col>
-        <Col span="10">
+        <Col span="3"><div class="layout-qr"><img :src="qrcode"></div></Col>
+        <Col span="9">
           <div class="footer-item lined">
             <ul>
               <li>关于我们</li>
@@ -51,13 +51,13 @@ export default {
 <style scoped>
 .myfooter{
     padding: 20px 50px;
-/*    position: fixed;
+    position: fixed;
     bottom: 0;
-    width: 100%*/
+    width: 100%
 }
 .layout-qr{
-    width: 145px;
-    height: 100px;
+    width: 120px;
+    height: 80px;
     border-right: 1px solid #284c9a;
 }
 .layout-qr img{
@@ -67,6 +67,7 @@ export default {
     display: table;
     padding-bottom: 5px;
     color: #284c9a;
+    font-size: 11px;
 }
 .footer-item ul{
     list-style: none;

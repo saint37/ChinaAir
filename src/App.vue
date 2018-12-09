@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <transition
+        name="out-in"
+        enter-active-class="animated fadeInRight"
+        leave-active-class="animated fadeOutLeft"
+    >
+        <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-
+import 'vue2-animate/dist/vue2-animate.min.css';
 export default {
   name: 'App',
 }

@@ -91,6 +91,7 @@ export default {
 }
 .newsimg img{
 	width: 100%;
+    height: 260px;
 }
 .newsc{
 	text-align: center;

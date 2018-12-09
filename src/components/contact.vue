@@ -6,7 +6,7 @@
             <div class="divider"></div>
             <div class="title2">联系我们</div>
         </Col>
-        <Col span="4">
+        <Col span="6">
             <div class="address">
                 <p class="t">中航空港（北京）技术培训中心</p>
                 <div class="tsm">T E L</div>
@@ -17,7 +17,7 @@
                 <p>北京市顺义区天柱东路润通大厦A座211</p>
             </div>
         </Col>
-        <Col span="14" offset="2">
+        <Col span="14">
             <div id="amap-main"></div>
         </Col>
     </Row>
